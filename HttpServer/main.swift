@@ -10,3 +10,10 @@ import Foundation
 
 print("Hello, World!")
 
+let server = HttpServer(ip: "localhost", port: 6789) { request, response in
+    response.setContent(body: "YUMMY :)")
+}
+
+server.run()
+RunLoop.current.run()
+
